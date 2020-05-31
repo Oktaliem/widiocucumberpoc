@@ -1,6 +1,6 @@
 Feature: Login To Akaunting
 
-    As a usef of Akaunting softwar
+    As a User of Akaunting software
     I want to be able to login to portal
 
     Scenario: Login with valid credential

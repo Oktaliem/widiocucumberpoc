@@ -9,5 +9,6 @@ Feature: Login To Akaunting
         Then I can login successfully
 
     Scenario: Login with invalid password
-      When I go to Akaunting login page
-       And I login with valid the username "admin@example.com" and password "gogon"
+        When I go to Akaunting login page
+        And I login with valid the username "admin@example.com" and password "gogon"
+        Then I will see error message "These credentials do not match our records."

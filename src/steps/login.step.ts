@@ -17,3 +17,7 @@ When(/^I login with valid the username \"([^\"]*)\" and password \"([^\"]*)\"$/,
 Then(/^I can login successfully$/, function () {
   loginPage.landingToDashboardPage();
 });
+
+Then(/^I will see error message \"([^\"]*)\"$/, function (errorMessage) {
+  loginPage.verifyErrorMessageIsCorrect(errorMessage);
+});

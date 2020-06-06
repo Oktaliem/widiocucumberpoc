@@ -1,17 +1,21 @@
 import { addScreenshot, addText } from '../support/lib/context';
+import { MenuPage } from './menucomponent.page';
 
-export class ItemPage {
-    get itemPage() { return $("a[href='http://0.0.0.0:10080/common/items']") }
+export class ItemPage extends MenuPage{
+   
+    get itemPage() { return $("//a[contains(.,'Items')]") }
     get itemName() { return $("#name") }
     get sku() { return $("#sku") }
     get desc() { return $("#description") }
     get purchasePrice() { return $("#purchase_price") }
     get salesPrice() { return $("#sale_price") }
     get quantity() { return $("#quantity") }
+    get addNewItemBtn(){return $(".btn-success")}
 
     openItemPage() {
         addText("Click on item page");
-        this.itemName.click();
+        this.itemPage.click();
+        addScreenshot();
     }
 
     inputItemName(itemName: string) {
@@ -49,5 +53,11 @@ export class ItemPage {
         this.quantity.setValue(num);
         addScreenshot();
     }
+
+    clickOnAddItemBtn() {
+        addText("Click on add intem button");
+        this.addNewItemBtn.click();
+        addScreenshot();
+      }
 
 }

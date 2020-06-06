@@ -1,14 +1,17 @@
-import { Page } from './base.page';
 import { addScreenshot, addText } from '../support/lib/context';
 import { expect } from 'chai';
 
-export class LoginPage extends Page {
-    
+export class LoginPage{
+
     get username() { return $("[name='email']") }
     get password() { return $("[name='password']") }
     get loginBtn() { return $('.btn') }
     get titlePage() { return $('h1') }
     get alert(){return $('.alert')}
+
+    open(path) {
+        browser.url(path)
+    }
 
     inputUserName(userName: string) {
         addText("input user name");

@@ -2,8 +2,8 @@ import { When, Given } from "cucumber";
 import { LoginPage } from '../pages/login.page';
 import { ItemPage } from '../pages/item.page';
 
-let loginPage = new LoginPage;
-let itemPage = new ItemPage;
+let loginPage = new LoginPage();
+let itemPage = new ItemPage();
 
 Given(/^I have logged in to Akauntin web portal$/, function () {
   loginPage.open('http://192.168.1.81:10080/auth/login');
@@ -15,7 +15,7 @@ Given(/^I have logged in to Akauntin web portal$/, function () {
 When(/^I add New Item Form with "([^"]*)?" and "([^"]*)?" and "([^"]*)?"$/,
   function (name, sku, description) {
     itemPage.openItemPage();
-    browser.pause(10000);
+    itemPage.clickOnAddItemBtn();
     itemPage.inputItemName(name);
     itemPage.inputSku(sku);
     itemPage.inputDesc(description);

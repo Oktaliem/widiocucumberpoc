@@ -30,7 +30,7 @@ export const reportingConfig = {
     profile: [],
     // <string[]> (file/dir) require files before executing features
     require: [
-      './src/steps/**/*.ts',
+      './src/steps/*.step.ts',
     ],
     // <string> specify a custom snippet syntax
     snippetSyntax: undefined,

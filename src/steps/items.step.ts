@@ -21,9 +21,15 @@ When(/^I add New Item Form with "([^"]*)?" and "([^"]*)?" and "([^"]*)?"$/,
     itemPage.inputDesc(description);
   });
 
-When(/^I add "([^"]*)?" and "([^"]*)?" and with quantity "([^"]*)?"$/,
+  When(/^I add Sales Price \"([^\"]*)\" and purchase price \"([^\"]*)\" and with quantity \"([^\"]*)\"$/,
   function (saleprice, purchaceprice, num) {
     itemPage.inputSalesPrice(saleprice);
     itemPage.inputPurchasePrice(purchaceprice);
     itemPage.inputQuantity(num);
+  });
+
+  When(/^I give tax \"([^\"]*)\" % and category \"([^\"]*)\" and without picture attached$/, 
+  function (tax, category) {
+    console.log(tax);
+    // itemPage.selectCategory(category);
   });

@@ -9,11 +9,8 @@ Feature: Manage Items
     @Verbose
     Scenario Outline: Add New Item
         When I add New Item Form with "<Name>" and "<SKU>" and "<Description>"
+        And I add Sales Price "3000" and purchase price "2000" and with quantity "200"
+        And I give tax "2" % and category "Makanan" and without picture attached
         Examples:
             | Name    | SKU | Description   |
             | Ketupat | KT  | Barang Jualan |
-
-        # When I add "<salePrice>" and "<purchacePrice>" and with quantity "<num>"
-        # Examples:
-        #     | salePrice | purchacePrice | num |
-        #     | 3000      | 2000          | 200 |

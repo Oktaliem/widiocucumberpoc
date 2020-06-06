@@ -24,20 +24,15 @@ $ docker-compose up
 ## How to run the test
 ```
 1. Open repository via Visual Studio Code
-2. Install Firefox and Chrome in Docker
-$ docker-compose
 
-3. Install project dependencies
-$ npm install
+2. Start Selenium Grid and node in Docker
+$  npm run selenium:vnc
 
-4. Start Selenium Grid and node
-$  npm run selenium
-
-5. Open VNC to this address 127.0.0.1:5900 & 127.0.0.1:5901
-6. Run the test
+3. Open VNC to this address 127.0.0.1:5900 & 127.0.0.1:5901
+4. Run the test
 $ npm run test:vnc
 
-7. HMTL report will be opened automatically after test.
+5. HMTL report will be opened automatically after test.
 
 ```
 
